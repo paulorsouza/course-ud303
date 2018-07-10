@@ -25,8 +25,9 @@ class MessageHandler(BaseHTTPRequestHandler):
     def do_POST(self):
         content_length = self.headers.get('content-length', 0)
         length = int(content_length)
-        println(length)
-        # 2. Read the correct amount of data from the request.
+        print(length)
+        
+        request_body = self.rfile.read
 
         # 3. Extract the "message" field from the request data.
 
